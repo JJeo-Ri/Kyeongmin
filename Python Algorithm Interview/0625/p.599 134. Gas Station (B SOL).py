@@ -1,20 +1,18 @@
-# 내 풀이랑 비슷함. 결국 이것도 Time Exceeded
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
+        # 모든 주유소 방문 가능 여부 판별
+        if sum(gas) < sum(cost):
+            return -1
 
-        for start in range(len(gas)):
-            fuel = 0
-            for i in range(start, len(gas) + start):
-                index = i % len(gas)
+        start, fuel = 0, 0
+        for i in range(len(gas)):
+            # 출발점이 안 되는 지점 판별
+            if gas[i] + fuel < cost[i]:
+                start = i + 1
+                fuel = 0
+            else:
+                fuel += gas[i] - cost[i]
 
-                can_travel = True
-                if gas[index] + fuel < cost[index]:
-                    can_travel = False
-                    break
-                else:
-                    fuel += gas[index] - cost[index]
+        return start
 
-            if can_travel:
-                return start
-
-        return -1
+        
