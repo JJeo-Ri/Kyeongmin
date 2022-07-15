@@ -26,6 +26,7 @@ def check_correct(s): # 올바른 괄호 문자열인지 체크!
             
     return True if not st else False
 
+### 위의 사용자 함수까지는 잘 동작함! ###
 
 answer = ''
 def solution(p):
