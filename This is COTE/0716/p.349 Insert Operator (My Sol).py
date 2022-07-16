@@ -29,7 +29,42 @@ for idx in range(len(cnt)):
         for _ in range(cnt[idx]):
             sign.append("/")
 
-print(num)
-print(sign)
+# print(num)
+# print(sign)
 
-# sign에 대해서 조합 적용! combination
+# sign에 대해서 조합 적용! permutaions
+from itertools import permutations
+import copy
+
+sign_list = list(permutations(sign, len(sign)))
+print(sign_list)
+
+answer_list = []
+for s in sign_list:
+    iter_num = copy.deepcopy(num)
+    iter_op = list(copy.deepcopy(s))
+    answer = iter_num.pop(0)
+  
+    while iter_num:
+        print(iter_num)
+        print(s)
+        next_num = iter_num.pop(0)
+        print(answer, next_num)
+
+        op = iter_op.pop(0)
+        if op == "+":
+            answer = sum(answer, next_num)
+        elif op == "-":
+            answer = subtract(answer, next_num)
+        elif op == "*":
+            answer = multi(answer, next_num)
+        elif op == "/":
+            answer = divide(answer, next_num)
+      
+        print(answer)
+      
+    print("answer: ", answer)
+    answer_list.append(answer)
+
+
+print(max(answer_list), min(answer_list))
