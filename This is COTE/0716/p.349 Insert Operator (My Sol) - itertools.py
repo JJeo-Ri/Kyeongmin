@@ -68,3 +68,4 @@ for s in sign_list:
 
 
 print(max(answer_list), min(answer_list))
+# 3번째 예시에서 틀림. 어떤부분에 오류가 있는지 디버깅 필요!
