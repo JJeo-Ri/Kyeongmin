@@ -1,5 +1,6 @@
 #!/use/bin/env python3
 # -*- coding: utf-8 -*-
+
 import time
 # 모든 가설 투영을 이진법으로 바꾼다
 hypo_old = [0xff, 0xf9, 0xfa, 0xfc, 0xcf, 0xd7, 0xe7, 0x7f,
