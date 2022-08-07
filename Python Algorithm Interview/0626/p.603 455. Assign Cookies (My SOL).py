@@ -9,6 +9,7 @@ class Solution:
             # 여기서부터 시작
             count = 0
             remain = 0
+            
             for j in range(i, i + len(gas)):
                 remain = remain + gas[j % len(gas)] - cost[j % len(gas)]
                 if remain < 0:
