@@ -35,7 +35,6 @@ class Solution:
                 edges.append((manhattan_distance(points[i], points[j]), i + 1, j + 1))
 
         edges.sort() # 맨해튼 거리가 짧은 순으로 오름차순 정렬
-        # print(edges)
         
         # 부모 테이블 상에서, 부모를 자기 자신으로 초기화
         for i in range(1, len(points) + 1):
@@ -44,11 +43,8 @@ class Solution:
         for edge in edges:
             cost, a, b = edge
             # 싸이클이 발생하지 않는 경우에만 union 실행
-            # print(a, b)
             if find_parent(parent, a) != find_parent(parent, b):
                 union_parent(parent, a, b)
                 answer += cost
-            
-            # print(parent)
             
         return 
