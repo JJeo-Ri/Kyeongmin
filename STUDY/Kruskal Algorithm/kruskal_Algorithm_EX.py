@@ -42,6 +42,7 @@ class Solution:
         
         for edge in edges:
             cost, a, b = edge
+            
             # 싸이클이 발생하지 않는 경우에만 union 실행
             if find_parent(parent, a) != find_parent(parent, b):
                 union_parent(parent, a, b)
