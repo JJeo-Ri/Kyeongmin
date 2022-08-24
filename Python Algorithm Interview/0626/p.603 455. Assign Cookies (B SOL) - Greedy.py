@@ -5,6 +5,7 @@ class Solution:
         s.sort()
 
         child_i = cookie_j = 0
+        
         # 만족하지 못할 때 까지 그리디 진행
         while child_i < len(g) and cookie_j < len(s):
             if s[cookie_j] >= g[child_i]:
