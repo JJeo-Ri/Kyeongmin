@@ -34,7 +34,8 @@ def dfs(i, now):
             mul += 1
         if div > 0:
             div -= 1
-            dfs(i + 1, int(now / data[i])) # 나눌 때는 나머지를 제거
+            # 나눌 때는 나머지를 제거
+            dfs(i + 1, int(now / data[i])) 
             div += 1
 
 # DFS 메서드 호출
