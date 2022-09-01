@@ -4,8 +4,7 @@ class Solution:
         # gas >= cost 인 인덱스 Check!
         for i in range(len(gas)):
             if gas[i] < cost[i]:
-                continue
-                
+                continue             
             # 여기서부터 시작
             count = 0
             remain = 0
