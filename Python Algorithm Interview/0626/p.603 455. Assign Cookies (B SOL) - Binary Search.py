@@ -3,7 +3,6 @@ class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         g.sort()
         s.sort()
-
         result = 0
         for i in s:
             # 이진 검색으로 더 큰 인덱스 탐색
