@@ -21,7 +21,6 @@ for i in range(48):
     hypo_const.append(0)
 # print(hypo_const)
 # print(len(hypo_const))
-
 # 총 18개의 '와일드 카드;가 없는 가설이 존재
 new_leaf = [0x20000, 0x10000,
             0x08000, 0x04000, 0x02000, 0x01000,
@@ -31,7 +30,6 @@ new_leaf = [0x20000, 0x10000,
 
 n_count = 0
 n_n = 48
-
 
 def count(n_n: int, n_k: int, hypo_appear: list):
     global n_count
@@ -94,9 +92,7 @@ def count(n_n: int, n_k: int, hypo_appear: list):
         pass
     return
 
-
 if __name__ == '__main__':
-   
     for i in range(48):
         for j in range(18):
             if hypo_old[i] | hypo_leaf[j] == hypo_old[i]:
