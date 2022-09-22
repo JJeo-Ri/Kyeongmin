@@ -28,7 +28,6 @@ while q:
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
-
         if 0 <= nx and nx < n and 0 <= ny and ny < n:
             if graph[nx][ny] == 0:
                 graph[nx][ny] = virus
