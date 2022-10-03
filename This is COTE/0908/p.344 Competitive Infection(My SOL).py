@@ -8,6 +8,7 @@ for i in range(n):
     graph.append(list(map(int, input().split())))
     for j in range(n):
         # 만약에 바이러스가 있다면, info에 정보 추가
+        
         if graph[i][j] != 0:
             info.append((graph[i][j], 0, i, j))
 
